@@ -24,6 +24,6 @@ This repository contains a Node.js project built with the Express framework. It 
 
 ##Project
 - This is a project that has a basic course api
-![login](https://github.com/thedarkarchitect/LMS-course-api/assets/74735932/99a90475-5390-4a7e-a58a-0104ed9085f2)
+![Login]](login.png)
 
-![homepage](https://github.com/thedarkarchitect/LMS-course-api/assets/74735932/6a07a730-225f-48c6-b85b-59ae10b45a73)
+![homepage](homepage.png)
