@@ -37,7 +37,7 @@ const createCourse = async (req, res) => {
     });
   }catch(e){
     console.log(e);
-    res.status(500).json(
+    res.status(400).json(
       {message: 'Course not added!'}
     );
   }
@@ -63,16 +63,11 @@ const updateCourse = async (req, res) => {
     // Object.assign(updateCourse, req.body); //this will merge and update the targeted item in the json
   
     // courses[index] = updateCourse; //after merging individual item we replace it in the whole array using index
-    const { title, description, instructor, price } = req.body;
+    // const { title, description, instructor, price } = req.body;
     try{
       const updatedCourse = await prisma.course.update({
         where: { id: id },
-        data: {
-          title: title,
-          description: description,
-          instructor: instructor,
-          price: price
-        }
+        data: req.body
       });
 
       res.json({
