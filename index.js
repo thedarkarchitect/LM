@@ -7,7 +7,7 @@ import courseRouter from './routes/course.routes.js'
 
 
 const app = express();
-const port = process.env.PORT || 10000;
+const port = process.env.PORT || 8080;
 const hardcodedPassword = 'Ineedajob'; // Replace with your actual password
 let isLogined = false;
 const __filename = fileURLToPath(import.meta.url); // this strips away the file:// protocol so the url can be used in path(gives you the filepath to the current file)
@@ -56,5 +56,5 @@ app.get('/node-course', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server listening on port http://127.0.0.1:${port}`);
+  console.log(`Server listening on port http://localhost:${port}`);
 });
